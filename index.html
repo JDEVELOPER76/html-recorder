@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grabadora de Pantalla Pro</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">Captura de pantalla</p>
+        <h1>Graba la pantalla de tu PC</h1>
+        <p class="subtitle">
+          Inicia una grabación con audio del sistema y micrófono. La descarga se
+          guarda en MP4 si tu navegador lo permite.
+        </p>
+      </header>
+
+      <section class="panel controls" aria-label="Controles de grabación">
+        <button id="start" class="btn btn-primary">Iniciar grabación</button>
+        <button id="stop" class="btn btn-danger" disabled>Detener</button>
+        <label class="mic-option" for="includeMic">
+          <input id="includeMic" type="checkbox" checked />
+          Incluir micrófono (opcional)
+        </label>
+      </section>
+
+      <section class="panel info" aria-live="polite">
+        <div class="status-row">
+          <span class="label">Estado</span>
+          <span id="status" class="value">Listo</span>
+        </div>
+        <div class="status-row">
+          <span class="label">Formato</span>
+          <span id="format" class="value">Pendiente</span>
+        </div>
+      </section>
+
+      <section class="panel preview-wrap">
+        <p class="preview-title">Vista previa en vivo</p>
+        <video id="preview" class="preview" autoplay muted playsinline></video>
+      </section>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
